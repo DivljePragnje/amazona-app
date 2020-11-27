@@ -20,12 +20,6 @@ function App() {
           <main>
             <Route path="/" component={HomeScreen} exact />
             <Route path="/product/:id" component={ProductScreen} />
-            <ul>
-              <li>Product 1</li>
-              <li>Product 2</li>
-              <li>Product 3</li>
-              <li>Product 4</li>
-            </ul>
           </main>
           <footer className="row center">All right reserved</footer>
         </div>
