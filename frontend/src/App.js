@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Signout } from "./actions/userActions";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
+import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import OrderScreen from "./screens/OrderScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceorderScreen from "./screens/PlaceorderScreen";
@@ -47,6 +48,9 @@ function App() {
                   </Link>
                   <ul className="dropdown-content">
                     <li>
+                      <Link to="/orderhistory">Order History</Link>
+                    </li>
+                    <li>
                       <Link to="#signout" onClick={signoutHandler}>
                         Sign Out
                       </Link>
@@ -60,14 +64,15 @@ function App() {
           </header>
           <main>
             <Route path="/cart/:id?" component={CartScreen} />
-            <Route path="/" component={HomeScreen} exact />
             <Route path="/register" component={RegisterScreen} />
             <Route path="/signin" component={SigninScreen} />
             <Route path="/shipping" component={ShippingAddressScreen} />
             <Route path="/payment" component={PaymentMethodScreen} />
             <Route path="/placeorder" component={PlaceorderScreen} />
             <Route path="/order/:id" component={OrderScreen} />
+            <Route path="/orderhistory" component={OrderHistoryScreen} />
             <Route path="/product/:id" component={ProductScreen} />
+            <Route path="/" component={HomeScreen} exact />
           </main>
           <footer className="row center">All right reserved</footer>
         </div>
