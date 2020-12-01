@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Signout } from "./actions/userActions";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
+import PaymentMethodScreen from "./screens/PaymentMethodScreen";
+import PlaceorderScreen from "./screens/PlaceorderScreen";
 import ProductScreen from "./screens/ProductScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAdressScreen";
@@ -37,7 +39,6 @@ function App() {
                   <span className="badge"> {cartItems.length}</span>
                 )}
               </Link>
-              {console.log(userInfo)}
               {userInfo ? (
                 <div className="dropdown">
                   <Link to="#">
@@ -62,6 +63,8 @@ function App() {
             <Route path="/register" component={RegisterScreen} />
             <Route path="/signin" component={SigninScreen} />
             <Route path="/shipping" component={ShippingAddressScreen} />
+            <Route path="/payment" component={PaymentMethodScreen} />
+            <Route path="/placeorder" component={PlaceorderScreen} />
             <Route path="/product/:id" component={ProductScreen} />
           </main>
           <footer className="row center">All right reserved</footer>

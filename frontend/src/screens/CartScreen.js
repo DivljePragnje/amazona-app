@@ -20,7 +20,6 @@ function CartScreen(props) {
   }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = (id) => {
-    console.log(id);
     dispatch(removeFromCart(id));
   };
 
